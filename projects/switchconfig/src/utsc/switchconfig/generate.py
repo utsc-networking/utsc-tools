@@ -42,6 +42,15 @@ DEFAULT_GLOBALS = {
 }
 
 
+def get_templates_dir() -> Path:
+    """
+    search for a templates directory in the following order of decreasing priority:
+    ./templates (ie: a templates folder in the current working directory)
+    config.generate.templates_dir if available
+    _default_templates_dir
+    """
+
+
 def extract_questions(template: str) -> list[tuple[str, str, str]]:
     # extract questionnaire from template
     questions_missing_msg = "Missing question block. All switch \
@@ -96,8 +105,6 @@ def validate_data_from_comment_block_schema(
         if field_name not in input_data:
             output[field_name] = prompt.string(*question)
     return output
-
-
 class Choice(BaseModel):
     # Base class used to define multiple choices in a discriminated union.
     # see the "Union" example under https://pydantic-docs.helpmanual.io/usage/types/#literal-type
