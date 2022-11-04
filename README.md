@@ -1,3 +1,7 @@
+# This project has moved
+
+Its new home is https://github.com/uoft-networking/tools/
+
 a python monorepo for all projects in the utsc-networking umbrella
 
 # Overview
