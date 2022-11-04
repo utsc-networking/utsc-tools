@@ -1,3 +1,7 @@
+# This project has moved
+
+Its new home is https://github.com/uoft-networking/tools/tree/main/projects/core
+
 # About
 
 This package contains a set of utilities useful for building python libraries, scripts, and command-line utilities
